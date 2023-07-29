@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bea9fe7359dc524e81c3f5accbaad11, type: 3}
+  m_Name: NPC 4 - Multiple Reference States - Dialogue Manager
+  m_EditorClassIdentifier: 
+  currentReferenceState: 
+  currentInteraction: {fileID: 0}
+  interactions:
+  - {fileID: 11400000, guid: 90f18fa534ae6424793a51ca383cebca, type: 2}
+  - {fileID: 11400000, guid: d0fb42b72027e8d40913272f0d6c345b, type: 2}
+  - {fileID: 11400000, guid: a928d66b67d276647bd896a06691fc45, type: 2}
+  - {fileID: 11400000, guid: 909c31edfb577634a82ec2906db65e81, type: 2}
+  - {fileID: 11400000, guid: 49df980ccfe87584687797b739793acd, type: 2}
+  useRandomDialogueSelectionByWeight: 0

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bea9fe7359dc524e81c3f5accbaad11, type: 3}
+  m_Name: NPC 6 - Variables 2 - Dialogue Manager
+  m_EditorClassIdentifier: 
+  currentReferenceState: 
+  currentInteraction: {fileID: 11400000, guid: bde72c2153e393b4fa0cc71e34b2d0df, type: 2}
+  interactions:
+  - {fileID: 11400000, guid: fd47486b25841bd4fb4667174bc1ede4, type: 2}
+  - {fileID: 11400000, guid: bde72c2153e393b4fa0cc71e34b2d0df, type: 2}
+  - {fileID: 11400000, guid: b0a4a1dc94860624fa4fff6f651f2b23, type: 2}
+  useRandomDialogueSelectionByWeight: 0

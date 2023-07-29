@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efae26b488c046f691e99bf403b00c62, type: 3}
+  m_Name: Prefab Asset Manager
+  m_EditorClassIdentifier: 
+  PrefabAssetReferences:
+    keys:
+    - d56797a6-7a4e-4802-b1df-1a7e1b917ed8
+    - 028c65c4-8a65-42ae-b6f5-aa67e01f1840
+    - 1962a031-6cbb-4bd4-ad7c-91b733b7741d
+    - ace90a11-9ac5-4833-ab4a-e965f8e40503
+    values:
+    - m_AssetGUID: 8ce4a977f8b57c24d81351fa29856e03
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    - m_AssetGUID: 0ab365000eecb1d48ae654199ca7bcdd
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    - m_AssetGUID: 9ff97c73e65c4b04c99ba55b245c502b
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    - m_AssetGUID: 9ff97c73e65c4b04c99ba55b245c502b
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0

@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: c6037fc3fcd434143817fb4e1554ef33
+  m_SerializeEntries:
+  - m_GUID: 8ce4a977f8b57c24d81351fa29856e03
+    m_Address: Assets/_Game/Prefabs/Object Spawn Test Item 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0ab365000eecb1d48ae654199ca7bcdd
+    m_Address: Assets/_Game/Prefabs/Object Spawn Test Item 2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ff97c73e65c4b04c99ba55b245c502b
+    m_Address: Assets/_Game/Prefabs/Object Spawn Test Item 3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f348c717cdae7ed4fa7b395c9f530fb0
+    m_Address: Assets/_Game/Prefabs/Object Spawn Test Item 4.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: d3a1feda75d2d64488b02b380e8bd0b3, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d0c60f3960b14994bb12c20114214bbf, type: 2}
+    - {fileID: 11400000, guid: ff2eaf6176abfbb47ac18b733a79019d, type: 2}
