@@ -7,6 +7,7 @@ using DLS.Core.Data_Persistence;
 using DLS.Core.Input;
 using DLS.Game.Enums;
 using DLS.Game.GameStates;
+using DLS.Game.Interfaces;
 using DLS.Game.Levels;
 using DLS.Game.Managers;
 using DLS.Game.Messages;
@@ -18,8 +19,12 @@ using UnityEngine.InputSystem;
 namespace DLS.Game.PLayers
 {
     [RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
-    public class PlayerController: ActorController, IDataPersistence
+    public class PlayerController: ActorController, IDataPersistence, IHealth
     {
+        [field: SerializeField] public int CurrentHealth { get; set; }
+        [field: SerializeField] public int MaxHealth { get; set; }
+        [field: SerializeField] public bool IsAlive { get; set; }
+        
         [field: SerializeField] public float MoveSpeed { get; set; }
         [field: SerializeField] public string CurrentLevelName { get; set; }
         
@@ -165,6 +170,49 @@ namespace DLS.Game.PLayers
             data.savedGameObjects = SavedGameObjects;
             data.lastMovementPosition = lastMovementPosition;
         }
+        
+        public void SetHealth(int amount)
+        {
+            MessageSystem.MessageManager.SendImmediate(MessageChannels.Player, new HealthChangedMessage(id, amount, HealthChangeType.Set));
+            CurrentHealth = amount > MaxHealth ? MaxHealth : amount;
 
+            if (CurrentHealth <= 0)
+            {
+                Die();
+            }
+
+        }
+
+        public void AddHealth(int amount)
+        {
+            MessageSystem.MessageManager.SendImmediate(MessageChannels.Player, new HealthChangedMessage(id, amount, HealthChangeType.Add));
+            if (CurrentHealth + amount > MaxHealth)
+            {
+                CurrentHealth = MaxHealth;
+            }
+            else
+            {
+                CurrentHealth += amount;
+            }
+        }
+
+        public void RemoveHealth(int amount)
+        {
+            MessageSystem.MessageManager.SendImmediate(MessageChannels.Player, new HealthChangedMessage(id, amount, HealthChangeType.Remove));
+            if (CurrentHealth - amount <= 0)
+            {
+                CurrentHealth = 0;
+                Die();
+            }
+            else
+            {
+                CurrentHealth -= amount;
+            }
+        }
+
+        public void Die()
+        {
+            MessageSystem.MessageManager.SendImmediate(MessageChannels.Player, new DeathMessage(id));
+        }
     }
 }
