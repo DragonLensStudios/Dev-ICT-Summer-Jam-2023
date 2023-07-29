@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88db9970722648bf83131a1b52c20ef2, type: 3}
-  m_Name: Level 1
+  m_Name: Level 3 v2
   m_EditorClassIdentifier: 
   <ID>k__BackingField:
-    guidString: aec99dfe-4e97-4a5a-baa8-2e2f2794e9da
-  <LevelName>k__BackingField: Level 1
-  <LevelPrefab>k__BackingField: {fileID: 4012662514637304950, guid: c9e1a3b6e8b3eb7419e4737e70866b1f, type: 3}
-  <PlayerSpawnPosition>k__BackingField: {x: -9, y: 9}
+    guidString: 6c7acd30-e8a5-4108-8ca9-4639f358cced
+  <LevelName>k__BackingField: Level 3 v2
+  <LevelPrefab>k__BackingField: {fileID: 4012662514637304950, guid: 3ba76006f73b79e4db9c6b5bd7637dda, type: 3}
+  <PlayerSpawnPosition>k__BackingField: {x: -21, y: 17}
   <LevelState>k__BackingField: 0
   spawnedLevel: {fileID: 0}
