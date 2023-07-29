@@ -18,6 +18,7 @@ MonoBehaviour:
     - 028c65c4-8a65-42ae-b6f5-aa67e01f1840
     - 1962a031-6cbb-4bd4-ad7c-91b733b7741d
     - ace90a11-9ac5-4833-ab4a-e965f8e40503
+    - b37be3af-7068-4946-b899-2e5eaec25be5
     values:
     - m_AssetGUID: 8ce4a977f8b57c24d81351fa29856e03
       m_SubObjectName: 
@@ -32,6 +33,10 @@ MonoBehaviour:
       m_SubObjectType: 
       m_EditorAssetChanged: 0
     - m_AssetGUID: 9ff97c73e65c4b04c99ba55b245c502b
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    - m_AssetGUID: 7f16b5b7ff8ba2742a5e4b791d93a799
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
