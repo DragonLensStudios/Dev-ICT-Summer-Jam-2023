@@ -9,6 +9,7 @@ using UnityEngine.Tilemaps;
 
 namespace DLS.Game.Spawning
 {
+
     public class SpawningTrigger : MonoBehaviour
     {
         [Tooltip("Single object to spawn")]

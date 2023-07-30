@@ -25,6 +25,7 @@ namespace DLS.Game.PLayers
     {
         [field: SerializeField] public int CurrentHealth { get; set; }
         [field: SerializeField] public int MaxHealth { get; set; }
+        [field: SerializeField] public int Resources { get; set; } = 5;
         [field: SerializeField] public bool IsAlive { get; set; }
         
         [field: SerializeField] public float MoveSpeed { get; set; }
