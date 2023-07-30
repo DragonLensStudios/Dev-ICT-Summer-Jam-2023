@@ -34,6 +34,7 @@ public class BuilderMenuController : MonoBehaviour
         {
             activeObject.transform.parent = null;
             activeObject = null;
+            MessageSystem.MessageManager.SendImmediate(MessageChannels.UI, new HidePopupMessage(PopupType.Notification));
         }
         
 
@@ -42,8 +43,6 @@ public class BuilderMenuController : MonoBehaviour
     {
         if (activeObject != null)
         {
-            string buttonName = InputHelper.GetButtonNameForAction(actionReference);
-            MessageSystem.MessageManager.SendImmediate(MessageChannels.UI, new PopupMessage($"Press {buttonName} to Place", PopupType.Notification, PopupPosition.Top));
             var player = PlayerManager.Instance.Player;
 
             if (player != null)
@@ -71,7 +70,6 @@ public class BuilderMenuController : MonoBehaviour
         }
         else
         {
-            MessageSystem.MessageManager.SendImmediate(MessageChannels.UI, new HidePopupMessage(PopupType.Notification));
 
         }
     }
@@ -83,16 +81,16 @@ public class BuilderMenuController : MonoBehaviour
 
      public async void SpawnTower(GameObject prefab)
     {
+        string buttonName = InputHelper.GetButtonNameForAction(actionReference);
+        MessageSystem.MessageManager.SendImmediate(MessageChannels.UI, new PopupMessage($"Press {buttonName} to Place", PopupType.Notification, PopupPosition.Top));
         if (activeObject != null)
         {
-            Destroy(activeObject);
+            DestroyImmediate(activeObject);
             activeObject = null;
         }
         var prefabID = prefab.GetObjectPrefabID();
         var player = PlayerManager.Instance.Player;
         
-        
-
         if(player != null)
         {
             var placementPositon = player.transform.position + Vector3.up;
