@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88db9970722648bf83131a1b52c20ef2, type: 3}
+  m_Name: Level 1 v2
+  m_EditorClassIdentifier: 
+  <ID>k__BackingField:
+    guidString: 5ad4bfd7-013b-4640-8276-2852510a9541
+  <LevelName>k__BackingField: Level 1 v2
+  <LevelPrefab>k__BackingField: {fileID: 6029579607055129431, guid: 05c43d5ca647a934e930adcf7482d4a2, type: 3}
+  <PlayerSpawnPosition>k__BackingField: {x: -11, y: 7}
+  <LevelState>k__BackingField: 0
+  spawnedLevel: {fileID: 0}
