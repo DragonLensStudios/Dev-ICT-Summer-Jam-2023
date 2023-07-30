@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 24790384327716509}
   - component: {fileID: 3805726993952899800}
   m_Layer: 0
-  m_Name: Base Player
+  m_Name: ToD Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 25
-  m_Sprite: {fileID: 6655694979181595500, guid: c08a348e7b2c7c3418cd8bed23b61f4f, type: 3}
+  m_Sprite: {fileID: 3925392525071727770, guid: 280ad7efdc2f06642b6fdca27e88e6d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +100,7 @@ Animator:
   m_GameObject: {fileID: 1617965913096240596}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 191897944a5579044aa0fd5a36278a11, type: 2}
+  m_Controller: {fileID: 9100000, guid: 917869628fd198849aafcd751bcef58e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
