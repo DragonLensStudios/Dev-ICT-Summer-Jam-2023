@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class fireBall : MonoBehaviour
 {
-    public float speed = 20f;
-    public Rigidbody2D rb;
-    void Start()
+    public GameObject hitEffect;    //find impact sprite to use
+
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        rb.velocity = transform.right * speed;
+        GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+        Destroy(effect, 2f);
+        Destroy(gameObject);
     }
 
 
