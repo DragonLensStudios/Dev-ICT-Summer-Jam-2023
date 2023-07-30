@@ -37,8 +37,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7f16b5b7ff8ba2742a5e4b791d93a799
-    m_Address: Assets/_Game/Prefabs/Towers/ArrowTower.prefab
+  - m_GUID: 714fd2152cb08394f9a579c53fbbc7f3
+    m_Address: Assets/_Game/Prefabs/Towers/Fire Tower.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d1ea350422b57d3458a7bf4f42ee7b5e
+    m_Address: Assets/_Game/Prefabs/Towers/Earth Tower.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2c96acc4c7dd769499b9db3977cb3c4b
+    m_Address: Assets/_Game/Prefabs/Towers/Ice Tower.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
