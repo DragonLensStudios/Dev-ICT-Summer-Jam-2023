@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7436334313354263049}
   - component: {fileID: 3923309844012139021}
   - component: {fileID: 24790384327716509}
+  - component: {fileID: 3805726993952899800}
   m_Layer: 0
   m_Name: Base Player
   m_TagString: Player
@@ -28,13 +29,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1617965913096240596}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1070077946391744402}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4372739077718045778
 SpriteRenderer:
@@ -90,7 +92,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &5693479491259965445
 Animator:
-  serializedVersion: 7
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -104,7 +106,6 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -149,17 +150,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a865db6736784308928a504c2ab366d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelId:
+    guidString: 
+  prefabId:
+    guidString: 
   id:
     guidString: 
-  actorName: 
+  objectName: 
   portrait: {fileID: 0}
   isInteracting: 0
   isMovementDisabled: 0
   dialogueManager: {fileID: 0}
+  <CurrentHealth>k__BackingField: 0
+  <MaxHealth>k__BackingField: 0
+  <IsAlive>k__BackingField: 0
   <MoveSpeed>k__BackingField: 0
   <CurrentLevelName>k__BackingField: 
+  <CurrentLevelID>k__BackingField:
+    guidString: 
   <AchievementManager>k__BackingField: {fileID: 11400000, guid: 6f54aa2d08a652445ab3d5e1ffa7d657, type: 2}
   <AchievementProgressList>k__BackingField: []
+  <SavedGameObjects>k__BackingField: []
   <lastMovementPosition>k__BackingField: {x: 0, y: 0}
 --- !u!58 &24790384327716509
 CircleCollider2D:
@@ -169,7 +180,6 @@ CircleCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1617965913096240596}
   m_Enabled: 1
-  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -193,7 +203,51 @@ CircleCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.35}
+  serializedVersion: 2
   m_Radius: 0.2
+--- !u!114 &3805726993952899800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617965913096240596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601fc9757643f3145827ff899bb189d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireSource: {fileID: 1070077946391744402}
+--- !u!1 &2304401362875145084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1070077946391744402}
+  m_Layer: 0
+  m_Name: FireSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1070077946391744402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2304401362875145084}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.188, y: -0.318, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5574974819398866360}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

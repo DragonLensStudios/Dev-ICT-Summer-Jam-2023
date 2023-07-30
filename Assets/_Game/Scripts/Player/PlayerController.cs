@@ -209,6 +209,10 @@ namespace DLS.Game.PLayers
                 CurrentHealth -= amount;
             }
         }
+        public void Shoot(InputAction.CallbackContext input)    //garbage added by Austin
+        {
+         //   MessageSystem.MessageManager.SendImmediate(MessageChannels.Player, );
+        }
 
         public void Die()
         {
