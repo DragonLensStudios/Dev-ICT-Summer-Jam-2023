@@ -12,6 +12,7 @@ namespace DLS.Game.Enums
         Level,
         Achievement,
         Spawning,
+        Builder
     }
 
 }

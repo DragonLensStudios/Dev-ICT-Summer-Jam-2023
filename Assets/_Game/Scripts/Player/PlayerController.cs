@@ -212,31 +212,9 @@ namespace DLS.Game.PLayers
                 CurrentHealth -= amount;
             }
         }
-  /*      public void Shoot(InputAction.CallbackContext input)    //garbage added by Austin
-        {
-            public float speed = 20f;
-            public Rigidbody2D fireballRb;
-            if (lastMovementPosition)
-            {
-                fireballRb.velocity = transform.right * speed;
-            }
-            else if(lastMovementPosition)
-            {
-                fireballRb.velocity = transform.left * speed;
-            }
-            else if()
-            {
-                fireballRb.velocity = transform.up * speed;
-            }
-            else 
-            {
-             fireballRb.velocity = transform.down * speed;
-            }
-            
-        }
-  */
         public void Die()
         {
+            MessageSystem.MessageManager.SendImmediate(MessageChannels.GameFlow, new PauseMessage(true, false));
             MessageSystem.MessageManager.SendImmediate(MessageChannels.Player, new DeathMessage(id));
         }
     }

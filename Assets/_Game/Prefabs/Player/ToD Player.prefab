@@ -137,7 +137,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &3923309844012139021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,8 +161,9 @@ MonoBehaviour:
   isInteracting: 0
   isMovementDisabled: 0
   dialogueManager: {fileID: 0}
-  <CurrentHealth>k__BackingField: 0
-  <MaxHealth>k__BackingField: 0
+  <CurrentHealth>k__BackingField: 10
+  <MaxHealth>k__BackingField: 10
+  <Resources>k__BackingField: 5
   <IsAlive>k__BackingField: 0
   <MoveSpeed>k__BackingField: 0
   <CurrentLevelName>k__BackingField: 
@@ -219,7 +220,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 601fc9757643f3145827ff899bb189d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireSource: {fileID: 1070077946391744402}
+  spawnPosition: {fileID: 1070077946391744402}
+  fireBallPrefab: {fileID: 380309589886792193, guid: e512e69730142da4c85ad6db6cd8788c, type: 3}
+  timeDelay: 0.5
+  fireballForce: 20
 --- !u!1 &2304401362875145084
 GameObject:
   m_ObjectHideFlags: 0

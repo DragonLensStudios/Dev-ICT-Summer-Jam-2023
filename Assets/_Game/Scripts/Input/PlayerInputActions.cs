@@ -64,6 +64,15 @@ namespace DLS.Core.Input
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Fire"",
+                    ""type"": ""Button"",
+                    ""id"": ""11ceecf2-0580-400e-81c6-da0c2cf2ee97"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -196,6 +205,28 @@ namespace DLS.Core.Input
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f1ab3201-3514-41c3-946d-024dbe408e45"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Fire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3a6bcaf6-b2eb-4a39-864b-6ef4db3842bb"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Fire"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -589,6 +620,7 @@ namespace DLS.Core.Input
             m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
             m_Player_OpenAchievementMenu = m_Player.FindAction("OpenAchievementMenu", throwIfNotFound: true);
             m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
+            m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
             // UI
             m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
             m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -666,6 +698,7 @@ namespace DLS.Core.Input
         private readonly InputAction m_Player_Interact;
         private readonly InputAction m_Player_OpenAchievementMenu;
         private readonly InputAction m_Player_Pause;
+        private readonly InputAction m_Player_Fire;
         public struct PlayerActions
         {
             private @PlayerInputActions m_Wrapper;
@@ -674,6 +707,7 @@ namespace DLS.Core.Input
             public InputAction @Interact => m_Wrapper.m_Player_Interact;
             public InputAction @OpenAchievementMenu => m_Wrapper.m_Player_OpenAchievementMenu;
             public InputAction @Pause => m_Wrapper.m_Player_Pause;
+            public InputAction @Fire => m_Wrapper.m_Player_Fire;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -695,6 +729,9 @@ namespace DLS.Core.Input
                 @Pause.started += instance.OnPause;
                 @Pause.performed += instance.OnPause;
                 @Pause.canceled += instance.OnPause;
+                @Fire.started += instance.OnFire;
+                @Fire.performed += instance.OnFire;
+                @Fire.canceled += instance.OnFire;
             }
 
             private void UnregisterCallbacks(IPlayerActions instance)
@@ -711,6 +748,9 @@ namespace DLS.Core.Input
                 @Pause.started -= instance.OnPause;
                 @Pause.performed -= instance.OnPause;
                 @Pause.canceled -= instance.OnPause;
+                @Fire.started -= instance.OnFire;
+                @Fire.performed -= instance.OnFire;
+                @Fire.canceled -= instance.OnFire;
             }
 
             public void RemoveCallbacks(IPlayerActions instance)
@@ -897,6 +937,7 @@ namespace DLS.Core.Input
             void OnInteract(InputAction.CallbackContext context);
             void OnOpenAchievementMenu(InputAction.CallbackContext context);
             void OnPause(InputAction.CallbackContext context);
+            void OnFire(InputAction.CallbackContext context);
         }
         public interface IUIActions
         {

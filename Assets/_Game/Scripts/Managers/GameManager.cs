@@ -50,6 +50,18 @@ namespace DLS.Game.Managers
             playerInput.Player.Pause.performed += PauseOnperformed;
             MessageSystem.MessageManager.RegisterForChannel<GameStateMessage>(MessageChannels.GameFlow, ChangeStateHandler);
             MessageSystem.MessageManager.RegisterForChannel<PauseMessage>(MessageChannels.GameFlow, PausedMessageHandler);
+            MessageSystem.MessageManager.RegisterForChannel<BuilderEndMessage>(MessageChannels.Builder, BuilderEndMessageHandler);
+            MessageSystem.MessageManager.RegisterForChannel<DeathMessage>(MessageChannels.Player, DeathMessageHandler);
+        }
+
+        private void DeathMessageHandler(MessageSystem.IMessageEnvelope message)
+        {
+            if(!message.Message<DeathMessage>().HasValue) return;;
+            var data = message.Message<DeathMessage>().Value;
+            if(data.ObjectID.Equals(PlayerManager.Instance.Player.ID))
+            {
+                SetState(GetStateByType<GameOverState>());
+            }
         }
 
         private void OnDisable()
@@ -59,6 +71,10 @@ namespace DLS.Game.Managers
 
             MessageSystem.MessageManager.UnregisterForChannel<GameStateMessage>(MessageChannels.GameFlow, ChangeStateHandler);
             MessageSystem.MessageManager.UnregisterForChannel<PauseMessage>(MessageChannels.GameFlow, PausedMessageHandler);
+            MessageSystem.MessageManager.UnregisterForChannel<BuilderEndMessage>(MessageChannels.Builder, BuilderEndMessageHandler);
+            MessageSystem.MessageManager.UnregisterForChannel<DeathMessage>(MessageChannels.Player, DeathMessageHandler);
+
+
         }
 
         private void Awake()
@@ -165,6 +181,12 @@ namespace DLS.Game.Managers
             {
                 MessageSystem.MessageManager.SendImmediate(MessageChannels.GameFlow, new PauseMessage(false));
             }
+        }
+
+        private void BuilderEndMessageHandler(MessageSystem.IMessageEnvelope message)
+        {
+            if (!message.Message<BuilderEndMessage>().HasValue) return;
+            SetState(GetStateByType<EnemyWaveState>());
         }
     }
 }

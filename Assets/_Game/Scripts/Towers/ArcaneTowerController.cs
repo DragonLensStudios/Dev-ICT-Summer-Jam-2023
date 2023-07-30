@@ -58,17 +58,17 @@ namespace DLS.Game.Towers
             }
             if(player.Resources < CurrentStack + 1 && CurrentStack != MaxStack)
             {
-                MessageSystem.MessageManager.SendImmediate(MessageChannels.UI, new PopupMessage($"Insufficent Resources To Stack", PopupType.Notification));
+                MessageSystem.MessageManager.SendImmediate(MessageChannels.UI, new PopupMessage($"Insufficent Resources To Stack", PopupType.Notification, PopupPosition.Top));
                
             }
             else if(CurrentStack == MaxStack)
             {
-                MessageSystem.MessageManager.SendImmediate(MessageChannels.UI, new PopupMessage($"Tower Complete", PopupType.Notification));
+                MessageSystem.MessageManager.SendImmediate(MessageChannels.UI, new PopupMessage($"Tower Complete", PopupType.Notification, PopupPosition.Top));
             }
-            else if(player.Resources >= CurrentStack+1)
+            else if(player.Resources >= CurrentStack + 1)
             {
                 string buttonName = InputHelper.GetButtonNameForAction(actionReference);
-                MessageSystem.MessageManager.SendImmediate(MessageChannels.UI, new PopupMessage($"Press {buttonName} To Stack Tower", PopupType.Notification));
+                MessageSystem.MessageManager.SendImmediate(MessageChannels.UI, new PopupMessage($"Press {buttonName} To Stack Tower", PopupType.Notification, PopupPosition.Top));
             }
         }
 
@@ -84,7 +84,7 @@ namespace DLS.Game.Towers
             if (player != null)
             {
                 MessageSystem.MessageManager.SendImmediate(MessageChannels.UI, new HidePopupMessage(PopupType.Notification));
-                if(player.Resources > CurrentStack + 1 && CurrentStack < MaxStack)
+                if(player.Resources >= CurrentStack + 1 && CurrentStack < MaxStack)
                 {
                     CurrentStack++;
                     player.Resources -= CurrentStack;
@@ -104,7 +104,8 @@ namespace DLS.Game.Towers
             MaxStack = data.MaxStack;
             for (int i = 0; i < data.CurrentStack; i++)
             {
-                if (Crystals[i].activeSelf == true) continue;
+                if (Crystals.Count < i + 1) continue;
+                if (Crystals[i].activeSelf) continue;
                 Crystals[i].SetActive(true);
             }
         }

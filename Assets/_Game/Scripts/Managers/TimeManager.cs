@@ -7,8 +7,8 @@ namespace DLS.Game.Managers
     {
         public static TimeManager Instance { get; private set; }
         
-        [field: SerializeField] public GameTime CurrentTime { get; set; }
         [field: SerializeField] public GameTime BuildTimer { get; set; }
+        [field: SerializeField] public GameTime CountDownTimer { get; set; }
 
         /// <summary>
         /// Ensures that only one instance of TimeManager exists in the scene.
@@ -25,8 +25,5 @@ namespace DLS.Game.Managers
                 Destroy(gameObject);
             }
         }
-        
-        
-
     }
 }
