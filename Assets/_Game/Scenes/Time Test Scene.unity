@@ -343,10 +343,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3805726993952899800, guid: 030a5ae4b1a602248a593cf865aba414, type: 3}
-      propertyPath: fireBallPrefab
-      value: 
-      objectReference: {fileID: 380309589886792193, guid: e512e69730142da4c85ad6db6cd8788c, type: 3}
     - target: {fileID: 5574974819398866360, guid: 030a5ae4b1a602248a593cf865aba414, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -394,16 +390,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1617965913096240596, guid: 030a5ae4b1a602248a593cf865aba414, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1044573288}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 030a5ae4b1a602248a593cf865aba414, type: 3}
---- !u!4 &486080498 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1070077946391744402, guid: 030a5ae4b1a602248a593cf865aba414, type: 3}
-  m_PrefabInstance: {fileID: 486080497}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &486080508 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5574974819398866360, guid: 030a5ae4b1a602248a593cf865aba414, type: 3}
@@ -663,24 +651,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1044573282 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1617965913096240596, guid: 030a5ae4b1a602248a593cf865aba414, type: 3}
-  m_PrefabInstance: {fileID: 486080497}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1044573288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1044573282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdf1ce428db62b947a86d226457d7d17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireSource: {fileID: 486080498}
 --- !u!1 &1532981963
 GameObject:
   m_ObjectHideFlags: 3

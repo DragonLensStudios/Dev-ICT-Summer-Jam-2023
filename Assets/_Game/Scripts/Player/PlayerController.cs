@@ -13,8 +13,10 @@ using DLS.Game.Managers;
 using DLS.Game.Messages;
 using DLS.Game.Utilities;
 using DLS.Utilities;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 namespace DLS.Game.PLayers
 {
@@ -23,6 +25,7 @@ namespace DLS.Game.PLayers
     {
         [field: SerializeField] public int CurrentHealth { get; set; }
         [field: SerializeField] public int MaxHealth { get; set; }
+        [field: SerializeField] public int Resources { get; set; } = 5;
         [field: SerializeField] public bool IsAlive { get; set; }
         
         [field: SerializeField] public float MoveSpeed { get; set; }
@@ -209,7 +212,29 @@ namespace DLS.Game.PLayers
                 CurrentHealth -= amount;
             }
         }
-
+  /*      public void Shoot(InputAction.CallbackContext input)    //garbage added by Austin
+        {
+            public float speed = 20f;
+            public Rigidbody2D fireballRb;
+            if (lastMovementPosition)
+            {
+                fireballRb.velocity = transform.right * speed;
+            }
+            else if(lastMovementPosition)
+            {
+                fireballRb.velocity = transform.left * speed;
+            }
+            else if()
+            {
+                fireballRb.velocity = transform.up * speed;
+            }
+            else 
+            {
+             fireballRb.velocity = transform.down * speed;
+            }
+            
+        }
+  */
         public void Die()
         {
             MessageSystem.MessageManager.SendImmediate(MessageChannels.Player, new DeathMessage(id));
